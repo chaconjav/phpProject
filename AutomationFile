@@ -1,0 +1,10 @@
+pipeline {
+    agent { docker { image 'php:7.0-stretch' } }
+    stages {
+        stage('build') {
+            steps {
+                sh 'php --version'
+            }
+        }
+    }
+}
